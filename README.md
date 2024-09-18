@@ -1,2 +1,2 @@
-# api-footinfo
-API para cadastro e consulta de informações sobre futebol.
+# API-FootInfo
+API desenvolvida para cadastro e consulta de informações sobre equipes, atletas, estádios e seleções de futebol.
