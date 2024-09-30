@@ -44,6 +44,7 @@ public class SecurityConfig implements Serializable {
 	SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity, JwtTokenFilter jwtTokenFilter) throws Exception {
 		httpSecurity
 		.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+		.cors().and().csrf(csrf -> csrf.disable())
 		.authorizeHttpRequests(auth -> auth
 				
 			.antMatchers(HttpMethod.GET, String.format("%s%s", Constants.REQUEST_MAPPING_VERSION_API, Constants.ENDPOINT_AUTH)).permitAll()
